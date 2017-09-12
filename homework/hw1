@@ -1,0 +1,23 @@
+<asia>
+	<south-korea>
+		<main-branch>
+			<seoul>
+				<gang-nam>
+			</seoul>
+		</main-branch>
+	</south-korea>
+	<china>
+		<main-branch>
+			<beijing>
+				<chaoyang>
+			</beijing>
+		</main-branch>
+	</china>
+	<japan>
+		<main-branch>
+			<tokyo>
+				<shibuya>
+			</tokyo>
+		</main-branch>
+	</japan>
+</asia>
