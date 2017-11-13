@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<style>
+	html{
+		margin:0px;
+		width:100%;
+		height:100%;
+		display:flex;
+		align-items: center;
+		justify-content: center;
+		background-color:yellow;
+	}
+	body{
+		color:black;
+		padding:25px;
+		display: block;
+		margin: auto;
+		width:100%;
+		font-size: 30px;
+	}
+</style>
+<body>
+<!-- <div id="text">korean food</div> -->
+<script>
+var koreanfood = ["kim chi",
+	"bibimbab",
+	"gal bi",
+	"gal bi tang",
+	"soon doo boo",
+	"sam gyeop sal",
+	"bulgogi",
+	"gogi gui",
+	"hae jang guk",
+	"mixed seafood stew",
+	"kimchi jjigae",
+	"saengseon jjigae",
+	"nakji bokkeum",
+	"seol leong tang",
+	"dol sot bibimbap",
+	"jjin man du",
+	"yaki man du",
+	"mul naeng myeon",
+	"bibim neng myeon",
+	"kimchi bokkeumbab",
+	"japchae",
+	"bindaetteok",
+	"soondae",
+	"gimbab",
+	"dak kochi",
+	"banchan",
+	"hotteok",
+	"twigim",
+	"tteok bokki",
+	"jja jang myeon",
+	"chimaek",
+	"ramyeon",
+	"soy sauce crab",
+	"gopchang",
+	"samgyetang",
+	"gamjatang",
+	"haemul pajeon",
+	"jjambbong",
+	"kongguksu",
+	"kalguksu",
+	"tteokguk",
+	"chuncheon dakgalbi",
+	"bossam",
+	"agujjim",
+	"hobakjuk",
+	"gyeranjjim",
+	"dotorimuk",
+	"mudfish soup",
+	"ppeongtwigi",
+	"bingsu"];
+
+var koreanfood = koreanfood[Math.floor(Math.random()*koreanfood.length)];
+var animals = ["aaradwolf",
+	"buffalo",
+	"squirrel",
+	"otter",
+	"darter",
+	"elephant",
+	"fish eagle",
+	"jacana",
+	"lion",
+	"lynx",
+	"wagtail",
+	"snake",
+	"lizard",
+	"alligator",
+	"beaver",
+	"bear",
+	"sheep",
+	"woodcock",
+	"anteater",
+	"rat",
+	"fox",
+	"hare",
+	"elephant",
+	"sea lion",
+	"raccoon",
+	"bat",
+	"buffalo",
+	"whale",
+	"deer",
+	"polar bear",
+	"rhinoceros",
+	"kangaroo",
+	"monkey",
+	"duck",
+	"peacock",
+	"dolphin",
+	"chimpanzee",
+	"flamingo",
+	"turkey",
+	"wolf",
+	"zebra",
+	"wombat",
+	"fox",
+	"eagle",
+	"penguin",
+	"goose",
+	"goat",
+	"kingfisher",
+	"pigeon",
+	"rabbit",
+	"rat",
+	"woodchuck"];
+
+var animals = animals[Math.floor(Math.random()*animals.length)];
+var furniture = ["chair",
+	"bean bag",
+	"chaise longue",
+	"fauteuil",
+	"stool",
+	"fainting couch",
+	"rocking chair",
+	"bench",
+	"couch",
+	"bed",
+	"daybed",
+	"hammock",
+	"headboard",
+	"infant bed",
+	"mattress",
+	"sofa bed",
+	"billiard table",
+	"chess table",
+	"entertainment center",
+	"jukebox",
+	"television set",
+	"radio reciever",
+	"desk",
+	"changing table",
+	"computer desk",
+	"kotatsu",
+	"monks bench",
+	"coffee table",
+	"dining table",
+	"refectory table",
+	"drop-leaf table",
+	"poker table",
+	"tv tray table",
+	"washstand",
+	"bookcase",
+	"bathroom cabinet",
+	"chifforobe",
+	"closet",
+	"cupboard",
+	"curio cabinet",
+	"kitchen cabinet",
+	"chest",
+	"coat rack",
+	"hatstand",
+	"floating shelf",
+	"nightstand",
+	"sideboard"];
+
+var furniture = furniture[Math.floor(Math.random()*furniture.length)];
+var lastpara = [koreanfood, animals, furniture]
+var lastpara = lastpara[Math.floor(Math.random()*lastpara.length)]
+
+var firstpara = ["My favorite koreanfood is",
+	"The cutest animal I believe is",
+	"I would like to buy"];
+
+var firstpara = firstpara[Math.floor(Math.random()*firstpara.length)];
+
+document.write(firstpara + lastpara);
+
+</script>
+</body>
+</html>
