@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<style>
+body{text-align: center; background: #fff; color: #000;}
+</style>
+<div id="result"></div>
+<script>
+
+var result = document.getElementById('result');
+var string = "Not in those climes where I have late been straying,    Though Beauty long hath there been matchless deemed,    Not in those visions to the heart displaying    Forms which it sighs but to have only dreamed,    Hath aught like thee in truth or fancy seemed:    Nor, having seen thee, shall I vainly seek    To paint those charms which varied as they beamed—    To such as see thee not my words were weak; To those who gaze on thee, what language could they speak?";
+
+var dictionary = {};
+var ngrams = [];
+var ngramlength = 10;
+
+for(var i = 0; i < string.length-ngramlength; i+=ngramlength){
+	var ngram = string.substring(i, i+ngramlength);
+	var ngramNext = string.substring(i+ngramlength, i+ngramlength*2);
+	if(dictionary[ngram] === undefined){
+		dictionary[ngram] = [];
+	}
+	dictionary[ngram].push(ngramNext);
+	ngrams.push(ngram);
+}
+
+
+// var firstGram = ngrams[ Math.floor(Math.random()*ngrams.length) ];
+// var phrase = [firstGram];
+
+var generateLength = 40;
+
+for(var i = 0; i < string.length-ngramlength; i+=ngramlength){
+	var ngram = string.substring(i, i+ngramlength);
+	var next = string.substring(i+ngramlength, i+ngramlength*2);
+	if(dictionary[ngram] === undefined){
+		dictionary[ngram] = [];
+	}
+	dictionary[ngram].push(next);
+	ngrams.push(ngram);
+	//result.innerHTML += (ngrams + '<br>');
+}
+
+for(var j=0;j<=32;j++){
+	var random = Math.floor(Math.random()*ngrams.length);
+	result.innerHTML += (ngrams[random] + '<br>');
+}
+
+
+console.log(Math.floor(Math.random()*10));
+var startWord = ngrams[ Math.floor(Math.random()* ngramlength) ];
+
+var phrase = [startWord]; 
+
+var nextArray = dictionary[startWord];
+var nextWord = nextArray[Math.floor(Math.random()+nextArray.length) ];
+
+phrase.push(nextWord);
+
+
+result.innerHTML += phrase;
+
+</script>
+</body>
+</html>
