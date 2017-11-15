@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<style>
+body, html {
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+img {
+	width: 1280px;
+	height: 700px;
+}
+#container{
+	width: 600px;
+	height: 500px;
+	position: absolute;
+}
+</style>
+<body>
+<div id="container"></div>
+<script>
+var container = document.getElementById("container"),
+	images = ["1.gif","2.gif","3.gif"],
+	counter = 1;
+
+images.innerHTML = '<img src="'+counter+'.jpg">'
+document.onkeydown = arrowKeys;
+function arrowKeys (e){
+	e = e || window.event; 
+		if(e.keyCode == '38'){
+			counter++;
+		}
+		if(e.keyCode == '40'){
+			counter--;
+		}
+		if(counter == 3){
+			counter =1;
+		}
+		if(counter == 0){
+			counter = 3;
+		}
+		container.innerHTML = '<img src="'+counter+'.gif">'
+}
+</script>
+</body>
+</html>
