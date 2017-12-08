@@ -22,8 +22,8 @@
 		font-size: 30px;
 	}
 </style>
-<body>
-<!-- <div id="text">korean food</div> -->
+<body onclick="changetext()">
+<h1 id="text-code"></h1>
 <script>
 var koreanfood = ["kim chi",
 	"bibimbab",
@@ -183,9 +183,9 @@ var furniture = furniture[Math.floor(Math.random()*furniture.length)];
 var lastpara = [koreanfood, animals, furniture]
 var lastpara = lastpara[Math.floor(Math.random()*lastpara.length)]
 
-var firstpara = ["My favorite koreanfood is",
-	"The cutest animal I believe is",
-	"I would like to buy"];
+var firstpara = [" My favorite koreanfood is ",
+	" The cutest animal I believe is ",
+	" I would like to buy "];
 
 var firstpara = firstpara[Math.floor(Math.random()*firstpara.length)];
 

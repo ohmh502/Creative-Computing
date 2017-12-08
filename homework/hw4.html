@@ -9,33 +9,39 @@ html, body{
 	display:flex;
 	align-items: center;
 	justify-content: center;
-	background-color: #1DD;
 }
-#circle{
-	width: 100px;
-	height: 100px;
-	background: red;
-	-moz-border-radius: 50px;
-	-webkit-border-radius: 50px;
-	border-radius: 50px;
+div { 
+	width:100px; 
+	height:100px; 
+	margin-top:180px; 
+	transform-origin:200% center; 
+	position:relative; 
+	animation:rotate 3s linear infinite; 
+	background-color: #98AFC7;
 }
-@keyframes bounce{
-	50%{
-		transform:translate(0px, 100px);
-	}
-	100%{
-		transform:initial;
-	}
+div:before { 
+	content:''; 
+	position:absolute; 
+	height:100%; 
+	width:100%; 
+	background:pink; 
+	animation:rotate 3s linear reverse infinite; 
 }
-.anim{
-	animation:bounce 2s infinite;
-}
+@keyframes rotate { 100% { transform:rotate(-360deg); } }
+
+body { background:rgb(20,20,20); } 
+
 </style>
 </head>
 <body>
-	<div class="anim">
-		<div id="square" class="rot"></div>
-		<div id="circle"></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
 </div>
 </body>
 </html>
