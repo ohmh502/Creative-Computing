@@ -25,6 +25,15 @@
 <body onclick="changetext()">
 <h1 id="text-code"></h1>
 <script>
+
+function changetext(){
+	var color = Math.random() * 360;
+	color = Math.floor(color);
+	var colorString = "hsl(" + color + ", 100%, 50%)"; 
+	document.body.style.backgroundColor = colorString;
+	document.getElementById("color-code").innerHTML = colorString;
+}
+
 var koreanfood = ["kim chi",
 	"bibimbab",
 	"gal bi",
